@@ -25,6 +25,20 @@ compiled on. Zero prefill. Constant KV cache. Unlimited compiled context.
 | 708K tokens | 21 MB | 284 GB | 13,500x | 31 tok/s |
 | **1.58M tokens** | **21 MB** | **634 GB** | **30,000x** | **30 tok/s** |
 
+### Qwen3.6-35B-A3B MoE (5x Tesla M40 24GB)
+
+36B total parameters, 3B active per token. Content compiled once, queried
+repeatedly from saved state at full speed.
+
+| Metric | Value |
+|---|---|
+| Generation speed | **33.3 tok/s** |
+| Prefill speed | 115 tok/s |
+| Compiled state size | 69.2 MB |
+| State save/restore | 0.3s (RAM or disk) |
+| Fact recall | 4/4 across 4 queries |
+| Backend | llama-cpp-python + llama.cpp CUDA |
+
 ### HumanEval (7B model, zero training)
 
 | Method | Score |
@@ -134,6 +148,7 @@ result = loop.generate_with_retry(prompt, validator=run_tests)
 | `compiled_chat.py` | Interactive CLI |
 | `self_steering.py` | Autonomous strategy selection and retry |
 | `test_rope_derotation.py` | RoPE de-rotation test suite (42 tests) |
+| `test_35b_llamacpp.py` | 35B MoE compiled context via llama.cpp (33 tok/s) |
 | `bench_humaneval*.py` | HumanEval benchmark scripts |
 | `docs/SPEC_COMPILED_CONTEXT.md` | Full specification (20 sections) |
 | `docs/ARCHITECTURE.md` | Technical architecture |
@@ -141,8 +156,9 @@ result = loop.generate_with_retry(prompt, validator=run_tests)
 ## Requirements
 
 - Python 3.10+
-- PyTorch 2.0+
+- PyTorch 2.0+ (for HuggingFace backend)
 - Any HuggingFace causal language model (Qwen, LLaMA, Mistral, etc.)
+- For hybrid attention models (Qwen3.5/3.6): `llama-cpp-python` + GGUF model
 - GPU with enough VRAM for the model weights (KV cache is negligible)
 - System RAM for compiled states (~56 KB per token for 7B)
 

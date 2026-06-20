@@ -337,7 +337,67 @@ decode speed is unchanged because FFN (87.5%) dominates.
 
 ---
 
-## 9. Future Directions
+## 9. llama.cpp Backend for Hybrid Attention Models
+
+### 9.1 The Problem
+
+Models with hybrid attention architectures (standard attention + linear
+attention / Gated DeltaNet) cannot run through HuggingFace's torch fallback
+on older GPUs. The native kernels (`flash-linear-attention`, `causal-conv1d`)
+require Volta+ (compute 7.0+). The torch fallback produces garbage output.
+
+### 9.2 The Solution
+
+Use llama.cpp as the inference backend via `llama-cpp-python`. llama.cpp
+implements hybrid attention in optimized C++/CUDA kernels that work on any
+GPU architecture (including Maxwell, compute 5.2).
+
+**Key technique**: Install a minimal `llama-cpp-python` (no compilation),
+then point it at a pre-built `libllama.so` via `LLAMA_CPP_LIB_PATH` env var.
+Load GGML backends via ctypes before importing:
+
+```python
+import ctypes, os
+os.environ["LLAMA_CPP_LIB_PATH"] = "/usr/local/lib/ollama"
+LIB_DIR = "/usr/local/lib/ollama"
+
+_ggml = ctypes.CDLL(os.path.join(LIB_DIR, "libggml.so"), mode=ctypes.RTLD_GLOBAL)
+_ggml.ggml_backend_load_all_from_path.argtypes = [ctypes.c_char_p]
+_ggml.ggml_backend_load_all_from_path.restype = None
+_ggml.ggml_backend_load_all_from_path(LIB_DIR.encode("utf-8"))
+_ggml.ggml_backend_load_all_from_path((LIB_DIR + "/cuda_v12").encode("utf-8"))
+
+from llama_cpp import Llama
+```
+
+### 9.3 KV Cache State Management
+
+`llama-cpp-python` exposes `save_state()` / `load_state()` for full context
+state serialization — this IS compiled context:
+
+```python
+llm.eval(tokens)                    # compile content
+state = llm.save_state()            # save to RAM (69 MB for 123 tokens)
+llm.load_state(state)               # restore (0.3s)
+with open(path, "wb") as f:         # save to disk
+    f.write(state.llama_state)
+```
+
+### 9.4 Proven Results (Qwen3.6-35B-A3B)
+
+| Metric | Value |
+|---|---|
+| Model | 36B params, 3B active (MoE, 256 experts, 8 active) |
+| Hardware | 5x Tesla M40 24GB (Maxwell, compute 5.2) |
+| Generation | **33.3 tok/s** |
+| Prefill | 115 tok/s |
+| Compiled state | 69.2 MB, save/restore 0.3s |
+| Disk persistence | Works (0.31s load from disk) |
+| Fact recall | 4/4 across 4 queries from saved state |
+
+---
+
+## 10. Future Directions
 
 ### Burn-In (KV States -> Permanent Weights)
 
