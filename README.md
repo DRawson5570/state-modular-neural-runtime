@@ -1,10 +1,16 @@
 # State-Modular Neural Runtime
 
-A system that treats the transformer's KV cache as a warm-loadable,
-addressable memory register. Content is compiled into reusable neural
-activations, stored in system RAM, and loaded directly into the attention
-path — dropping first-token latency to near-zero and offloading the
-prompt-processing budget to cheap system RAM.
+The model knows what it needs to, when it needs to.
+
+Content lives as text in system RAM — unlimited. When a question arrives,
+the relevant content is found (milliseconds), compiled into the model's
+KV cache (the model processes it through its own forward pass), and the
+model genuinely reasons about it at full speed. When the topic changes,
+different content is compiled. The model now knows that instead.
+
+The system has no context window. The model has working memory. Just like
+you have working memory but access to every book ever written. Nobody says
+you have a "7-item context window." They say you can think about anything.
 
 ## What This Is
 
