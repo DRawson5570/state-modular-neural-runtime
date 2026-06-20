@@ -5,39 +5,74 @@
 
 **Paper:** [Zero Token Prefill](Zero_Token_Prefill.pdf)
 
+## The Core Idea
+
 The transformer cannot distinguish between KV states built from live attention
-and KV states loaded from pre-computed storage. Content is compiled via a
-forward pass into persistent KV states. The model wakes up already knowing
-everything. There is no prompt. There is no context window.
+and KV states loaded from pre-computed storage. Content can be compiled via a
+forward pass into persistent KV states, saved to RAM or disk, and restored
+instantly. The model wakes up already knowing the compiled content. Zero
+prefill latency. Content processed once, queried forever.
 
-## What This Does
+## Two Tiers of Knowledge
 
-Compile any content (code, documents, conversation, system prompts) into
-persistent KV states stored in system RAM. Compose any subset in any order
-at query time. Generate with the model "already knowing" everything it was
-compiled on. Zero prefill. Constant KV cache. Unlimited compiled context.
+This system provides two distinct capabilities. They are both real, but they
+are different things and should not be conflated.
 
-### Real Numbers (Qwen 7B 4-bit, RTX 3080)
+### Tier 1: Compiled Context (The Model Genuinely Knows)
 
-| Context | KV Cache | Traditional KV | Reduction | Speed |
+Content is processed through the model's forward pass. The resulting KV states
+(or recurrent state for hybrid models) are saved. When restored, the model
+has the content in its active attention — it genuinely knows it, the same way
+it knows a prompt it just read. No search, no retrieval. The model knows.
+
+**Bounded by GPU VRAM.** At ~56 KB per token for a 7B model, a 10 GB GPU
+holds ~70K tokens of compiled content after model weights. A 35B MoE model
+compiled 123 tokens into 69 MB of state. This is the real "I know Kung Fu"
+tier — limited by memory, but genuine knowledge.
+
+| Model | Compiled Content | State Size | Speed | Hardware |
 |---|---|---|---|---|
-| 132K tokens | 21 MB | 53 GB | 2,500x | 31 tok/s |
-| 708K tokens | 21 MB | 284 GB | 13,500x | 31 tok/s |
-| **1.58M tokens** | **21 MB** | **634 GB** | **30,000x** | **30 tok/s** |
+| Qwen 7B 4-bit | 69 tokens (Zargthorp facts) | 4 MB | 30 tok/s | RTX 3080 |
+| Qwen3.6-35B-A3B | 123 tokens (Zargthorp facts) | 69 MB | 33 tok/s | 5x M40 24GB |
 
-### Qwen3.6-35B-A3B MoE (5x Tesla M40 24GB)
+Every fact recalled perfectly. Content compiled once, queried 4 times from
+saved state. State saved to disk, reloaded in 0.3s. No reprocessing.
 
-36B total parameters, 3B active per token. Content compiled once, queried
-repeatedly from saved state at full speed.
+### Tier 2: Indexed Corpus (The System Can Access)
 
-| Metric | Value |
-|---|---|
-| Generation speed | **33.3 tok/s** |
-| Prefill speed | 115 tok/s |
-| Compiled state size | 69.2 MB |
-| State save/restore | 0.3s (RAM or disk) |
-| Fact recall | 4/4 across 4 queries |
-| Backend | llama-cpp-python + llama.cpp CUDA |
+For content beyond what fits in active compiled state, the corpus is stored as
+text in RAM or on disk. A CPU-based search (text match, semantic index, or
+embedding search) locates relevant content in milliseconds. Only the relevant
+chunk is compiled into the model's active state. The model then knows that
+chunk genuinely (Tier 1), while the rest of the corpus remains as searchable
+text.
+
+**This is retrieval-augmented compilation, not "the model knows everything."**
+The model knows what's compiled into its state. The system can access anything
+in the indexed corpus. These are different capabilities.
+
+| Corpus Size | Search Time (CPU) | Compile Time (GPU) | Generation | Active KV |
+|---|---|---|---|---|
+| 100K tokens (625 KB) | 5 ms | 1,038 ms (~110 tokens) | 32 tok/s | 69 MB constant |
+
+5/5 needles found in a 100K-token haystack. But the model didn't "know" 100K
+tokens — it was told the relevant paragraph each time. The system accessed
+100K tokens. The model knew ~110 tokens.
+
+### What the 1.58M Token Test Actually Proved
+
+The earlier 1.58M-token needle-in-haystack test demonstrated **Tier 2** — system-level
+access, not model knowledge. A CPU text search found the needle in 33ms. The
+relevant chunk was compiled into 21 MB of KV states. The model answered from
+that chunk at 30 tok/s. The "30,000x KV reduction" compared a traditional
+system where the model attends to ALL 1.58M tokens (634 GB KV) with our
+system where the model attends to only the retrieved chunk (21 MB KV). The
+model never held 1.58M tokens in its state.
+
+**What it proved:** the system can access arbitrarily large corpora with
+constant active KV cache and constant generation speed. The search scales
+linearly on CPU. The compilation and generation are constant. This is real
+and useful — but it is retrieval + compilation, not omniscient knowledge.
 
 ### HumanEval (7B model, zero training)
 
@@ -119,7 +154,7 @@ Three components:
 
 | # | Mechanism | Target | What it does |
 |---|---|---|---|
-| 1 | Compiled KV states | Knowledge | Compile text/code/docs into the model's brain |
+| 1 | Compiled KV states | Knowledge | Compile text/code/docs into the model's active state |
 | 2 | System-role compilation | Behavior | Compile behavioral directives (pirate voice, terse, CoT) |
 | 3 | Multi-layer steering | Trained knowledge | Override deeply trained facts (Paris -> Lyon) |
 | 4 | Logit bias | Output tokens | Verbatim reproduction on quantized models |
@@ -149,6 +184,7 @@ result = loop.generate_with_retry(prompt, validator=run_tests)
 | `self_steering.py` | Autonomous strategy selection and retry |
 | `test_rope_derotation.py` | RoPE de-rotation test suite (42 tests) |
 | `test_35b_llamacpp.py` | 35B MoE compiled context via llama.cpp (33 tok/s) |
+| `test_100k_pathb.py` | 100K corpus retrieval + compilation (Path B) |
 | `bench_humaneval*.py` | HumanEval benchmark scripts |
 | `docs/SPEC_COMPILED_CONTEXT.md` | Full specification (20 sections) |
 | `docs/ARCHITECTURE.md` | Technical architecture |
@@ -162,9 +198,16 @@ result = loop.generate_with_retry(prompt, validator=run_tests)
 - GPU with enough VRAM for the model weights (KV cache is negligible)
 - System RAM for compiled states (~56 KB per token for 7B)
 
-## Key Insight
+## What This Is and What It Isn't
 
-The GPU becomes an attention ASIC. Compiled states live in system RAM (cheap,
-abundant). The live KV cache stays tiny (~21 MB constant). The context window
-is an illusion created by the assumption that KV states must be built from
-live attention. They don't. Compile once, query forever.
+**What it is:** A system that eliminates prefill latency by pre-compiling
+content into reusable KV states. Combined with CPU-based corpus indexing,
+it provides instant access to arbitrarily large knowledge bases at constant
+generation speed. The compiled states are genuine model knowledge — the
+model attends to them identically to live input.
+
+**What it isn't:** A way to make a model "know" unlimited content
+simultaneously. The model's active knowledge is bounded by what fits in
+its compiled state (GPU VRAM for pure transformers, recurrent state
+capacity for hybrid models). Content beyond that boundary requires
+retrieval before compilation.

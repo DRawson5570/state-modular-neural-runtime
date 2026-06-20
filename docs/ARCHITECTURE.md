@@ -12,8 +12,14 @@ loaded from pre-computed storage in RAM. KV states are KV states.
 
 This means: instead of fitting content into a "context window," the system
 COMPILES content into KV states offline, stores them in RAM, and loads them
-before generation. The model wakes up already knowing everything. There was
-no prompt. There was no reading. There is no context window.
+before generation. The model wakes up already knowing the compiled content.
+Zero prefill latency. Content processed once, queried forever.
+
+**Important distinction:** The model genuinely knows what is compiled into its
+active state (bounded by GPU VRAM). For content beyond that limit, the system
+uses CPU-based search to locate relevant content, then compiles only the
+relevant chunks on demand. These are two different tiers — compiled knowledge
+vs indexed access. Both are useful. They should not be conflated.
 
 ---
 
@@ -191,8 +197,14 @@ Seven built-in tools for autonomous operation:
 Compile any text into KV states. The model attends to compiled content during
 generation as if it just read it. Content compiled once, queried unlimited times.
 
-Proven: Zargthorp facts, 767-line codebase (4 files), 1.58M-token
-needle-in-haystack (33ms search, 30 tok/s, 21 MB KV cache).
+Proven (Tier 1 — model genuinely knows): Zargthorp facts at both 7B and 35B,
+767-line codebase (4 files). Content compiled into active KV state, every
+fact recalled perfectly across multiple queries from saved state.
+
+Proven (Tier 2 — system accesses via search + compile): 1.58M-token corpus
+searched via CPU text match (33ms), relevant chunk compiled into 21 MB active
+KV, model answered at 30 tok/s. The model did not "know" 1.58M tokens — it
+knew the retrieved chunk. The system accessed the full corpus.
 
 ### 5.2 System-Role Compilation (Behavior)
 
