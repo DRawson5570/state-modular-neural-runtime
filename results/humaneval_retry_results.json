@@ -1,0 +1,1010 @@
+{
+  "baseline": 131,
+  "retry": 146,
+  "fixed": 15,
+  "total": 164,
+  "results": [
+    {
+      "id": "HumanEval/0",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/1",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "parsing"
+    },
+    {
+      "id": "HumanEval/2",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/3",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/4",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/5",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/6",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/7",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/8",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/9",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/10",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/11",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/12",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/13",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/14",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/15",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/16",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/17",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/18",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/19",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/20",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/21",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/22",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/23",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/24",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/25",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/26",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "counting"
+    },
+    {
+      "id": "HumanEval/27",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/28",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/29",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/30",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/31",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/32",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "polynomial"
+    },
+    {
+      "id": "HumanEval/33",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "sorting_ordering"
+    },
+    {
+      "id": "HumanEval/34",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/35",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/36",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/37",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/38",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "encoding_decoding"
+    },
+    {
+      "id": "HumanEval/39",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/40",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/41",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "geometry_collision"
+    },
+    {
+      "id": "HumanEval/42",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/43",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/44",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/45",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/46",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/47",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/48",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/49",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/50",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "encoding_decoding",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpbgbpd7gk.py\", line 26, in <module>\n    check(deco"
+    },
+    {
+      "id": "HumanEval/51",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/52",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/53",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/54",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/55",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/56",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/57",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/58",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/59",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/60",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/61",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/62",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/63",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/64",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "string_manipulation"
+    },
+    {
+      "id": "HumanEval/65",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "digit_manipulation",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpzbm6w9n4.py\", line 27, in <module>\n    check(circ"
+    },
+    {
+      "id": "HumanEval/66",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/67",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/68",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/69",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "counting"
+    },
+    {
+      "id": "HumanEval/70",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/71",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/72",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/73",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/74",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/75",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "prime_check",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpny6rzuc_.py\", line 41, in <module>\n    check(is_m"
+    },
+    {
+      "id": "HumanEval/76",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "general"
+    },
+    {
+      "id": "HumanEval/77",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/78",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/79",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/80",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/81",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/82",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/83",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "math_formula",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmp6gxk9nsk.py\", line 29, in <module>\n    check(star"
+    },
+    {
+      "id": "HumanEval/84",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/85",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/86",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/87",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/88",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/89",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/90",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/91",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/92",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "general",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmphs2pm1m8.py\", line 39, in <module>\n    check(any_"
+    },
+    {
+      "id": "HumanEval/93",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "encoding_decoding",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpdhp2znjr.py\", line 38, in <module>\n    check(enco"
+    },
+    {
+      "id": "HumanEval/94",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/95",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/96",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/97",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/98",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/99",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/100",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/101",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "parsing"
+    },
+    {
+      "id": "HumanEval/102",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/103",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/104",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/105",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/106",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/107",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/108",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "counting",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpglmdb0op.py\", line 34, in <module>\n    check(coun"
+    },
+    {
+      "id": "HumanEval/109",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/110",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "general",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpng3cf03w.py\", line 40, in <module>\n    check(exch"
+    },
+    {
+      "id": "HumanEval/111",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "string_manipulation"
+    },
+    {
+      "id": "HumanEval/112",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/113",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/114",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/115",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/116",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/117",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/118",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/119",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/120",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "list_filtering",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmps2pz4g1a.py\", line 28, in <module>\n    check(maxi"
+    },
+    {
+      "id": "HumanEval/121",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "general",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpfxzv4x9l.py\", line 27, in <module>\n    check(solu"
+    },
+    {
+      "id": "HumanEval/122",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "math_formula",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpv_mmdhmx.py\", line 27, in <module>\n    check(add_"
+    },
+    {
+      "id": "HumanEval/123",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/124",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/125",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/126",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "sorting_ordering"
+    },
+    {
+      "id": "HumanEval/127",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "math_formula"
+    },
+    {
+      "id": "HumanEval/128",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/129",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "counting",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmp7chxzyk2.py\", line 50, in <module>\n    check(minP"
+    },
+    {
+      "id": "HumanEval/130",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/131",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "digit_manipulation",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmp48kqp3wl.py\", line 29, in <module>\n    check(digi"
+    },
+    {
+      "id": "HumanEval/132",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "string_manipulation",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmp6vyoksw2.py\", line 33, in <module>\n    check(is_n"
+    },
+    {
+      "id": "HumanEval/133",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/134",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/135",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "counting",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmph_9c3p0u.py\", line 21, in <module>\n    check(can_"
+    },
+    {
+      "id": "HumanEval/136",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/137",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/138",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/139",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/140",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/141",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/142",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/143",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/144",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/145",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "sorting_ordering",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpbudg2oq7.py\", line 22, in <module>\n    check(orde"
+    },
+    {
+      "id": "HumanEval/146",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/147",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/148",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/149",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/150",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/151",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/152",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/153",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/154",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "string_manipulation",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpubogvreg.py\", line 32, in <module>\n    check(cycp"
+    },
+    {
+      "id": "HumanEval/155",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/156",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/157",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/158",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "search_match"
+    },
+    {
+      "id": "HumanEval/159",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/160",
+      "baseline": "FAIL",
+      "retry": "FIXED",
+      "strategy": "math_formula"
+    },
+    {
+      "id": "HumanEval/161",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/162",
+      "baseline": "PASS",
+      "retry": "PASS",
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/163",
+      "baseline": "FAIL",
+      "retry": "FAIL",
+      "strategy": "list_filtering",
+      "error": "Traceback (most recent call last):\n  File \"/tmp/tmpithxqd_t.py\", line 27, in <module>\n    check(gene"
+    }
+  ]
+}

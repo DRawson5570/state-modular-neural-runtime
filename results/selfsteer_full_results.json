@@ -1,0 +1,1000 @@
+{
+  "baseline": 138,
+  "steered": 149,
+  "fixed": 11,
+  "total": 164,
+  "time_s": 1602.0917794704437,
+  "stats": {
+    "strategies": 17,
+    "total_attempts": 62,
+    "total_successes": 11,
+    "success_rate": 0.1774193548387097,
+    "history_length": 11
+  },
+  "results": [
+    {
+      "id": "HumanEval/0",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/1",
+      "passed": true,
+      "attempts": 2,
+      "strategy": "step_by_step"
+    },
+    {
+      "id": "HumanEval/2",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/3",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/4",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/5",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/6",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/7",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/8",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/9",
+      "passed": true,
+      "attempts": 2,
+      "strategy": "step_by_step"
+    },
+    {
+      "id": "HumanEval/10",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/11",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/12",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/13",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/14",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/15",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/16",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/17",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/18",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/19",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/20",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/21",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/22",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/23",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/24",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/25",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/26",
+      "passed": true,
+      "attempts": 2,
+      "strategy": "step_by_step"
+    },
+    {
+      "id": "HumanEval/27",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/28",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/29",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/30",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/31",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/32",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/33",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/34",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/35",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/36",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/37",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/38",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/39",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/40",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/41",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/42",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/43",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/44",
+      "passed": true,
+      "attempts": 2,
+      "strategy": "step_by_step"
+    },
+    {
+      "id": "HumanEval/45",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/46",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/47",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/48",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/49",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/50",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/51",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/52",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/53",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/54",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/55",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/56",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/57",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/58",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/59",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/60",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/61",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/62",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/63",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/64",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/65",
+      "passed": true,
+      "attempts": 3,
+      "strategy": "trace_examples"
+    },
+    {
+      "id": "HumanEval/66",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/67",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/68",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/69",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/70",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/71",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/72",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/73",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/74",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/75",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/76",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/77",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/78",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/79",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/80",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/81",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/82",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/83",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/84",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/85",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/86",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/87",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/88",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/89",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/90",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/91",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/92",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/93",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/94",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/95",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/96",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/97",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/98",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/99",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/100",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/101",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/102",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/103",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/104",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/105",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/106",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/107",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/108",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/109",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/110",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/111",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/112",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/113",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/114",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/115",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/116",
+      "passed": true,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/117",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/118",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/119",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/120",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/121",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/122",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/123",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/124",
+      "passed": true,
+      "attempts": 2,
+      "strategy": "step_by_step"
+    },
+    {
+      "id": "HumanEval/125",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/126",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/127",
+      "passed": true,
+      "attempts": 2,
+      "strategy": "step_by_step"
+    },
+    {
+      "id": "HumanEval/128",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/129",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/130",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/131",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/132",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/133",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/134",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/135",
+      "passed": true,
+      "attempts": 2,
+      "strategy": "step_by_step"
+    },
+    {
+      "id": "HumanEval/136",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/137",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/138",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/139",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/140",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/141",
+      "passed": true,
+      "attempts": 3,
+      "strategy": "trace_examples"
+    },
+    {
+      "id": "HumanEval/142",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/143",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/144",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/145",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/146",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/147",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/148",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/149",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/150",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/151",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/152",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/153",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/154",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/155",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/156",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/157",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/158",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/159",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/160",
+      "passed": true,
+      "attempts": 4,
+      "strategy": "simplify"
+    },
+    {
+      "id": "HumanEval/161",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/162",
+      "passed": true,
+      "attempts": 1,
+      "strategy": null
+    },
+    {
+      "id": "HumanEval/163",
+      "passed": false,
+      "attempts": 4,
+      "strategy": "trace_examples"
+    }
+  ]
+}
