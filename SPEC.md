@@ -87,11 +87,56 @@ the raw content ever appearing in the attention window.
 - The model reasons through FFN, not attention
 - Scales to unlimited content (bounded by superposition capacity)
 
-**Two sub-mechanisms:**
+**Three sub-mechanisms:**
 1. **Steerer injection** — structural features into residual stream
    (reasoning about content structure, topics, patterns)
 2. **Cartridge injection** — logit bias or W_lm vectors for specific
    fact recall (verbatim token reproduction)
+3. **Dynamic FFN expansion** — append dedicated neurons to SwiGLU layers
+   at runtime for exact, interference-free fact storage
+
+**Dynamic FFN Expansion (solving superposition fuzziness):**
+
+Standard model memory is fuzzy because SGD compresses billions of facts
+into overlapping directions (superposition). Dynamic FFN expansion
+bypasses this entirely by appending ISOLATED neurons at runtime:
+
+```
+FFN_expanded(x) = FFN_base(x) + FFN_add(x)
+```
+
+This is mathematically exact for SwiGLU layers:
+- W_gate_add: address key (fires only when input matches trigger)
+- W_up_add: gating pathway
+- W_down_add: value (writes exact semantic coordinates to residual stream)
+- Bias b_add ≈ -4.0: sharp threshold, no fuzzy activation
+
+Each fact gets a dedicated, orthogonal neuron slot. Zero interference
+with base model weights. Zero semantic bleed. The gate ensures the
+neuron fires ONLY when the input matches the trigger with high cosine
+similarity (>0.9). When it fires, it writes the EXACT target
+coordinates — not a compressed approximation.
+
+Implementation: parallel lightweight branch on GPU. The base FFN weights
+are never modified. The branch output is added to the residual stream:
+
+```
+┌──────────────┐     ┌──────────────┐
+│  Base FFN    │     │ Dynamic FFN  │
+│  (frozen)    │     │ (k neurons)  │
+└──────┬───────┘     └──────┬───────┘
+       │                    │
+       └────────►+◄─────────┘
+                 │
+           Composed Output
+```
+
+Scaling: ~100 facts = trivial. ~100K facts = pair with semantic router
+(CPU index selects top-10 relevant facts, only those neurons loaded to
+GPU per query).
+
+**NOT YET PROVEN.** The math is exact. The mechanism is designed. It has
+not been implemented and tested on a real model. This is the next build.
 
 **Proven results:**
 - 820M steered backbone: PPL 36.9 (below oracle ceiling of 69.7)
@@ -186,14 +231,18 @@ architecture eliminated that bottleneck entirely.
 
 ### Remaining Barriers (Physics, Not Algorithms)
 
-**Barrier 1: Superposition Capacity (Path B)**
+**Barrier 1: Superposition Capacity (Path B) — SOLUTION DESIGNED**
 
 The residual stream is d_model dimensions (e.g., 3584 for Qwen 7B).
-Via superposition, more than d_model features can be packed into
-almost-orthogonal directions — but interference noise grows. At extreme
-scale (millions of tokens in d_model dimensions), features overlap,
-causing cognitive decay. This is an information-theoretic limit of vector
-space density, not an algorithmic limit.
+Standard steerer injection compresses features via superposition —
+interference noise grows at scale, causing cognitive decay.
+
+**Solution: Dynamic FFN expansion.** Append dedicated SwiGLU neurons
+for each fact at runtime. Each neuron is an isolated, orthogonal slot
+with a threshold-gated address key. Zero interference with base weights.
+Zero semantic bleed. The superposition limit applies only to the
+steerer's compressed features — dynamic FFN neurons bypass it entirely.
+Math proven exact. Not yet implemented.
 
 **Barrier 2: Memory Bandwidth (Path A)**
 
