@@ -153,17 +153,15 @@ GPU per query).
 
 | Conversation Size | Result |
 |---|---|
-| 8 turns | **8/8 perfect** |
-| 16 turns | **16/16 perfect** |
-| 32 turns | **32/32 perfect** |
-| 64 turns | **58/64 (90.6%)** |
-| 128 turns | **117/128 (91.4%)** |
-| 256 turns | **237/256 (92.6%)** |
-| 8-turn narrative (Deepwell) | **40/41 (97.6%)** |
+| 64 synthetic turns | **64/64 (100%)** |
+| 128 synthetic turns | **123/128 (96.1%)** |
+| 256 synthetic turns | **252/256 (98.4%)** |
+| 41 narrative facts (Deepwell) | **41/41 (100%)** |
 
-Zero degradation as context grows. Flat 0.9 q/s from 64 to 256 turns —
-empirical O(1) scaling. No semantic dilution. Accuracy stable/improving.
-97.6% on rich narrative content (character names, numbers, places, events).
+Optimal config: graduated alpha across layers 20-27 (10 at L20 → 50
+at L27). Low alpha at early layers for semantic guidance. High alpha at
+late layers for token precision. Cascaded reinforcement through 8
+consecutive layers.
 
 The dynamic FFN branch is strictly additive. Base weights never modified.
 Parallel branch adds output to residual stream. Each new conversation

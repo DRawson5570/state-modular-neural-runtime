@@ -29,14 +29,16 @@ it. The context window is genuinely zero for stored knowledge.
 
 ### FFN Gated Conversation (Path B)
 
+Optimal config: graduated alpha across layers 20-27 (10 at L20 → 50 at L27).
+Low alpha at early layers for semantic guidance. High alpha at late layers
+for token precision. Cascaded reinforcement through 8 consecutive layers.
+
 | Scale | Result | Accuracy |
 |---|---|---|
-| 8 conversation turns | **8/8** | 100% |
-| 16 conversation turns | **16/16** | 100% |
-| 32 conversation turns | **32/32** | 100% |
-| 64 conversation turns | **58/64** | 90.6% |
-| 128 conversation turns | **117/128** | 91.4% |
-| 256 conversation turns | **237/256** | 92.6% |
+| 64 synthetic turns | **64/64** | 100% |
+| 128 synthetic turns | **123/128** | 96.1% |
+| 256 synthetic turns | **252/256** | 98.4% |
+| 41 narrative facts (Deepwell) | **41/41** | 100% |
 | Execution speed (all scales) | **flat 0.9 q/s** | O(1) — zero degradation |
 
 ### Narrative Content (Deepwell Chronicles)
